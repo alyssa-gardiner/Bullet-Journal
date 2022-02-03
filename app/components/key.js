@@ -3,7 +3,6 @@ import { tracked } from '@glimmer/tracking';
 import { action, set } from '@ember/object';
 
 export default class KeyComponent extends Component {
-
   @tracked keyItems = [
     { id: 1, name: 'Run', color: '#ff3399' },
     { id: 2, name: 'Walk', color: '#ffff00' },
@@ -14,11 +13,11 @@ export default class KeyComponent extends Component {
 
   @action
   onColorChange(keyItemName, newColor) {
-  this.keyItems = this.keyItems.map(item => {
-    if(item.name === keyItemName) {
-      item.color = newColor;
-    }
-    return item;
-  });
+    this.keyItems = this.keyItems.map((item) => {
+      if (item.name === keyItemName) {
+        item.color = newColor;
+      }
+      return item;
+    });
   }
 }

@@ -1,7 +1,7 @@
 @import "ember-modal-dialog/ember-modal-structure.css";
 @import "ember-modal-dialog/ember-modal-appearance.css";
+@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Petit+Formal+Script&display=swap');
 
-*{font-family:Algerian;}
 
 .layout {
   display: flex;
@@ -21,6 +21,7 @@
   height: 550px;
   display: inline-grid;
   padding: 25px;
+  background-color: white;
 }
 .calendar-day {
   width: 130px;
@@ -75,4 +76,38 @@
   width: 250px;
   height: 500px;
   padding: 20px;
+}
+
+body  {
+}
+
+.tile {
+  border: solid #C59C66;
+  border-radius: 5%;
+  background-color: white;
+  margin: 50px;
+  border-radius: 10%;
+  height: 300px
+  text-align:center;
+  font-size: 75px;
+font-family: 'Molle', cursive;
+color:#C59C66;
+}
+
+.home {
+  height: 1500px;
+  background: url('/assets/images/gold-marble.jpeg') center center;
+}
+
+.tracker {
+  height: 1500px;
+  background: url('/assets/images/dot-grid-paper.jpeg') center center;
+}
+
+.title {
+font-family: 'Molle', cursive;
+color:#C59C66;
+text-align:center;
+font-size: 150px;
+padding-top: 50px;
 }
