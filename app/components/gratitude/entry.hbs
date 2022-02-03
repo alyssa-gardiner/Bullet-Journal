@@ -1,0 +1,11 @@
+<article class="gratitude-entry">
+  <h2 class="gratitude-entry-title">
+    {{@entry.prompt}}
+  </h2>
+  <div class="gratitude-entry-body">
+    {{this.parsedResponse}}
+  </div>
+  <footer class="gratitude-entry-footer">
+    {{moment-calendar @entry.createdAt}}
+  </footer>
+</article>

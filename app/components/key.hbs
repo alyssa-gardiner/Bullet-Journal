@@ -1,6 +1,6 @@
 
 <div class="key">
-  <button {{on "click" (fn (mut this.showModal) true)}}>Edit</button>
+  <button type="button" {{on "click" (fn (mut this.showModal) true)}}>Edit</button>
   {{#each this.keyItems as |keyItem|}}
     <KeyItem @keyItem={{keyItem}}></KeyItem>
   {{/each}}

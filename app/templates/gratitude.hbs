@@ -1,0 +1,9 @@
+{{page-title "Gratitude"}}
+
+<button class="add-button">
+  Add +
+</button>
+
+{{#each model as |entry|}}
+  <Gratitude::Entry @entry={{entry}} />
+{{/each}}

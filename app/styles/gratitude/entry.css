@@ -1,0 +1,29 @@
+.gratitude-entry {
+  background: #fffbf8;
+  border-radius: 0.5rem;
+  border: 1px solid #EDDCD2;
+  margin: 1rem auto 2rem;
+  width: calc(100% - 2rem);
+  max-width: 600px;
+}
+
+.gratitude-entry-title {
+  background: #FAD2E1;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-size: 1.25rem;
+}
+
+.gratitude-entry-body {
+  margin: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.gratitude-entry-footer {
+  font-size: 0.75rem;
+  background: #FFF1E6;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}

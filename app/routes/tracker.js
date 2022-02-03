@@ -5,7 +5,12 @@ export default class TrackerRoute extends Route {
     let days = [];
     let dayNumbers = Array.from({ length: 28 }, (v, i) => i + 1);
     dayNumbers.forEach((dayNumber) => {
-      let day = { month: 'February', number: dayNumber, exercise: null, description: '' };
+      let day = {
+        month: 'February',
+        number: dayNumber,
+        exercise: null,
+        description: '',
+      };
       days.push(day);
     });
     return {
