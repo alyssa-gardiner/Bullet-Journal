@@ -13,7 +13,8 @@
 .key {
   margin: 25px;
   width: 300px;
-  border: solid black;
+  border: solid #0000002b;
+  border-radius: 5%;
   border-width: 5px;
   height: 550px;
 }
@@ -23,8 +24,11 @@
 .calendar-day {
   width: 130px;
   height: 130px;
-  border: solid black;
+  border: solid #0000002b;
+  border-radius: 5%;
   border-width: 5px;
+  margin-right: 2.5px;
+  margin-bottom: 2.5px;
 }
 
 .key-name {
