@@ -8,5 +8,14 @@
   <ModalDialog
     @translucentOverlay=true
     @onClose={{action (mut this.showModal) false}}>
+    <h2>Edit</h2>
+    <div class="docs-flex">
+      {{color-picker
+        value=@keyItem.color
+        format="hex"
+        onInit=(action "onInit")
+        onSave=(action "handleOnChange")
+      }}
+    </div>
   </ModalDialog>
 {{/if}}
