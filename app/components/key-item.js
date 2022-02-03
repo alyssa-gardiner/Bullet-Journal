@@ -6,15 +6,9 @@ export default class KeyItemComponent extends Component {
   @tracked showModal = false;
 
   @action
-  onInit(pickrInstance) {
-      pickrInstance.setColor(this.args.keyItem.color);
-    }
-
-  @action
   handleOnChange(hsva, pickrInstance) {
       if(hsva) {
-//        TODO: pass in the method so the updated color is higher up
-        set(this.args.keyItem, 'color', hsva.toHEXA().toString());
+      this.args.onColorChange(this.args.keyItem.name, hsva.toHEXA().toString());
       }
       pickrInstance.hide()
     }
