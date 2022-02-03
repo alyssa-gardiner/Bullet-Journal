@@ -1,0 +1,14 @@
+<div style="text-align: center; width: 30%; margin: auto;">
+  <PowerSelect
+    @options={{@model}}
+    @selected={{this.selectedMonth}}
+    @onChange={{this.updateMonth}} as |month|>
+    <strong>{{month.name}}</strong>
+  </PowerSelect>
+</div>
+<div class="layout">
+  <Calendar
+    @month={{this.selectedMonth}}>
+  </Calendar>
+  <Key></Key>
+</div>
