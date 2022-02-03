@@ -1,6 +1,12 @@
 <div class="key-item">
     <span class="dot {{if @selected "selected"}}" style="background-color: {{@keyItem.color}}"></span>
     <span class="key-name">{{@keyItem.name}}</span>
+    <button style="margin-left: 100px" type="button" {{on "click" (fn (mut this.showModal) true)}}>Edit</button>
 </div>
 
-
+{{#if this.showModal}}
+  <ModalDialog
+    @translucentOverlay=true
+    @onClose={{action (mut this.showModal) false}}>
+  </ModalDialog>
+{{/if}}

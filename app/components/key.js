@@ -2,7 +2,6 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 
 export default class KeyComponent extends Component {
-  @tracked showModal = false;
 
   keyItems = [
     { id: 1, name: 'Run', color: '#ff3399' },
