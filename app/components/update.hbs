@@ -1,0 +1,13 @@
+<div class="update">
+  <h1 style="text-align: center">{{@day.month}} {{@day.number}}</h1>
+  {{#each this.keyItems as |keyItem|}}
+    <div {{on 'click' (fn this.updateDay keyItem)}}>
+      <KeyItem @keyItem={{keyItem}} @selected={{if (eq @day.exercise.name keyItem.name) true}}>
+      </KeyItem>
+    </div>
+  {{/each}}
+  <h2>How did you feel today?</h2>
+  <Textarea class="textarea" @value={{@day.description}} />
+</div>
+
+

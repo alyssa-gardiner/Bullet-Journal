@@ -1,0 +1,16 @@
+{{log @day.exercise.color}}
+<div class="calendar-day" style="background-color:{{@day.exercise.color}}"
+  {{on "click" this.showModal}}>
+  {{@day.number}}
+  {{@day.exercise.name}}
+</div>
+
+{{#if this.showModalValue}}
+  <ModalDialog
+    @translucentOverlay=true
+    @onClose={{action (mut this.showModalValue) false}}>
+    <Update
+    @day={{@day}}
+    ></Update>
+  </ModalDialog>
+{{/if}}

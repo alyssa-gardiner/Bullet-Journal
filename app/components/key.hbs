@@ -1,0 +1,14 @@
+
+<div class="key">
+  <button {{on "click" (fn (mut this.showModal) true)}}>Edit</button>
+  {{#each this.keyItems as |keyItem|}}
+    <KeyItem @keyItem={{keyItem}}></KeyItem>
+  {{/each}}
+</div>
+
+{{#if this.showModal}}
+  <ModalDialog
+    @translucentOverlay=true
+    @onClose={{action (mut this.showModal) false}}>
+  </ModalDialog>
+{{/if}}
