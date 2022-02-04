@@ -3,6 +3,8 @@
 @import "gratitude/index.css";
 @import "gratitude/entry.css";
 @import "gratitude/post.css";
+@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Petit+Formal+Script&display=swap');
+
 
 .layout {
   display: flex;
@@ -15,35 +17,35 @@
 }
 .key {
   margin: 25px;
-  width: 300px;
-  border: solid black;
+  width: 30%;
+  border: solid #0000002b;
+  border-radius: 5%;
   border-width: 5px;
   height: 550px;
-}
-.key-item {
-  position: relative;
+  display: inline-grid;
+  padding: 25px;
+  background-color: white;
 }
 .calendar-day {
   width: 130px;
   height: 130px;
-  border: solid black;
+  border: solid #0000002b;
+  border-radius: 5%;
   border-width: 5px;
+  margin-right: 2.5px;
+  margin-bottom: 2.5px;
 }
-
 .key-name {
-   transform: translateY(-50%);
-   position: absolute;
-   top: 50%;
+   font-family: 'American Typewriter', serif;
    font-weight: 500;
+   font-size:larger;
 }
 
 .dot {
-  height: 25px;
-  width: 25px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
   display: inline-block;
-  margin: 10px;
-  margin-right: 40px;
 }
 
 .selected{
@@ -59,7 +61,7 @@
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
   color: black;
   display: block; /* fixes margin issue in FF and Chrome */
-  font-family: 'Inter', sans-serif;
+  font-family: 'American Typewriter', serif;
   font-weight: 500;
   font-size: 1em;
   height: auto;
@@ -71,4 +73,48 @@
 
 .update {
   padding: 0px 20px 20px 20px;
+}
+
+.edit-modal {
+  width: 250px;
+  height: 500px;
+  padding: 20px;
+}
+
+body  {
+}
+
+.tile {
+  border: solid #C59C66;
+  border-radius: 5%;
+  background-color: white;
+  margin: 50px;
+  border-radius: 10%;
+  height: 300px;
+  text-align:center;
+  font-size: 75px;
+  font-family: 'Molle', cursive;
+  color:#C59C66;
+}
+.tile:hover {
+  background-color: #F2F2F2;
+  box-shadow: 0 0 21px rgba(33,33,33,.2);
+}
+
+.home {
+  height: 1500px;
+  background: url('/assets/images/gold-marble.jpeg') center center;
+}
+
+.tracker {
+  height: 1500px;
+  background: url('/assets/images/dot-grid-paper.jpeg') center center;
+}
+
+.title {
+font-family: 'Molle', cursive;
+color:#C59C66;
+text-align:center;
+font-size: 150px;
+padding-top: 50px;
 }

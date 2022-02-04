@@ -1,6 +1,33 @@
-<div class="key-item">
-    <span class="dot {{if @selected "selected"}}" style="background-color: {{@keyItem.color}}"></span>
-    <span class="key-name">{{@keyItem.name}}</span>
+<div class="row">
+  <span class="col-sm" style="text-align: center;">
+        <span class="dot {{if @selected "selected"}}" style="background-color: {{@keyItem.color}}"></span>
+  </span>
+    <span class="col-sm key-name">{{@keyItem.name}}</span>
+  <span class="col-sm" style="text-align: center;">
+    <button type="button" class="btn btn-secondary" {{on "click" (fn (mut this.showModal) true)}}>Edit</button>
+  </span>
 </div>
 
-
+{{#if this.showModal}}
+  <ModalDialog
+    @translucentOverlay=true
+    @onClose={{action (mut this.showModal) false}}>
+    <div class="edit-modal">
+      <h2 style="text-align: center">Edit</h2>
+      <div class="row">
+        <div class="docs-flex col-sm">
+          {{color-picker
+            value=@keyItem.color
+            format="hex"
+            onSave=(action "handleOnChange")
+          }}
+        </div>
+        <Input
+          id="user-question"
+          @type="text"
+          @value={{@keyItem.name}}
+        />
+      </div>
+    </div>
+  </ModalDialog>
+{{/if}}

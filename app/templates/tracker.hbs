@@ -1,12 +1,14 @@
 {{page-title "Tracker"}}
-<div style="text-align: center">
-  <h3>{{this.model.name}}</h3>
+<div class="tracker">
+  <Tracker
+    @model={{this.model}}>
+  </Tracker>
 </div>
-<div class="layout">
-    <Calendar
-      @month={{this.model}}>
-    </Calendar>
 
-  <Key></Key>
-</div>
-{{outlet}}
+
+
+
+
+
+
+
