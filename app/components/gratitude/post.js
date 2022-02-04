@@ -4,6 +4,19 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import moment from 'moment';
 
+const samplePrompts = [
+  'What I focused on today',
+  'Cute things I saw today',
+  'New things I tried today',
+  'Ways I supported others today',
+  'Ways I loved myself today',
+  'Fun things I did today',
+  'Ways I supported others today',
+  'Ways I challenged myself today',
+  'What inspired me today',
+  'What I let go of today',
+];
+
 export default class GratitudePostComponent extends Component {
   @service store;
   @tracked draft;
@@ -12,7 +25,7 @@ export default class GratitudePostComponent extends Component {
   constructor() {
     super(...arguments);
     this.draft = this.store.createRecord('gratitude', {
-      prompt: 'Test',
+      prompt: samplePrompts.random(),
       response: '',
     });
   }
@@ -29,3 +42,7 @@ export default class GratitudePostComponent extends Component {
     }
   }
 }
+
+Array.prototype.random = function () {
+  return this[Math.floor(Math.random() * this.length)];
+};

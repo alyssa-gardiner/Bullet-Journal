@@ -7,8 +7,6 @@ export default class GratitudeController extends Controller {
 
   @action
   addEntry(newEntry) {
-    console.log(newEntry);
-    console.log(this.model);
     this.model.unshiftObject(newEntry);
     this.showGratitudeModal = false;
   }
