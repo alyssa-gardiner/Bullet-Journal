@@ -1,0 +1,30 @@
+.sticker-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sticker-target {
+  border: 2px dotted transparent;
+  width: calc(100% - 1rem);
+  height: calc(100% - 2rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.sticker-target:drop {
+  background: rgba(255,255,255, 0.8);
+  border: 2px dotted blue;
+}
+
+.sticker {
+  font-size: 3rem;
+  margin: 0 1rem;
+}
+
+.calendar-sticker {
+  display: inline-block;
+  text-align: center;
+}

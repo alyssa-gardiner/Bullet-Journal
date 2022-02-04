@@ -2,6 +2,13 @@
   {{on "click" this.showModal}}>
   {{@day.number}}
   {{@day.exercise.name}}
+  <DraggableObjectTarget class="sticker-target" @action={{this.setSticker}}>
+    {{#each this.sticker as |sticker|}}
+      <div class="calendar-sticker" {{fit-text}}>
+        {{sticker.img}}
+      </div>
+    {{/each}}
+  </DraggableObjectTarget>
 </div>
 
 {{#if this.showModalValue}}

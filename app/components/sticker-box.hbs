@@ -1,0 +1,9 @@
+<section class="sticker-box">
+  {{#each this.stickerList as |sticker|}}
+    <DraggableObject @content={{sticker}}>
+      <div class="sticker">
+        {{sticker.img}}
+      </div>
+    </DraggableObject>
+  {{/each}}
+</section>

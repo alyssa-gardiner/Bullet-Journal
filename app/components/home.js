@@ -9,5 +9,4 @@ export default class HomeComponent extends Component {
   routeToTracker(url) {
     this.router.transitionTo(url);
   }
-
 }
