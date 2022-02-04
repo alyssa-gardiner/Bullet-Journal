@@ -8,7 +8,7 @@ export default class KeyItemComponent extends Component {
   @action
   handleOnChange(hsva, pickrInstance) {
     if (hsva) {
-      this.args.onColorChange(this.args.keyItem.name, hsva.toHEXA().toString());
+      this.args.onColorChange(this.args.keyItem.name, hsva.toHEXA().toString(), this.args.keyItem.id);
     }
     pickrInstance.hide();
   }
