@@ -5,9 +5,9 @@
       <div class="col tile" style="text-align: center;" {{on "click" (fn this.routeToTracker 'tracker')}}>
           Exercise
       </div>
-      <div class="col tile" style="text-align: center;">
-          Gratitude
-      </div>
+      <LinkTo @route="gratitude" class="col tile" style="text-align: center;">
+        Gratitude
+      </LinkTo>
       <div class="col tile" style="text-align: center;">
           Mood
       </div>
