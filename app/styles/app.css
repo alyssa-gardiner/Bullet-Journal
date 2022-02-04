@@ -1,5 +1,8 @@
 @import "ember-modal-dialog/ember-modal-structure.css";
 @import "ember-modal-dialog/ember-modal-appearance.css";
+@import "gratitude/index.css";
+@import "gratitude/entry.css";
+@import "gratitude/post.css";
 @import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Petit+Formal+Script&display=swap');
 
 
@@ -58,7 +61,7 @@
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
   color: black;
   display: block; /* fixes margin issue in FF and Chrome */
-  font-family: 'American Typewriter', serif
+  font-family: 'American Typewriter', serif;
   font-weight: 500;
   font-size: 1em;
   height: auto;
@@ -87,7 +90,7 @@ body  {
   background-color: white;
   margin: 50px;
   border-radius: 10%;
-  height: 300px
+  height: 300px;
   text-align:center;
   font-size: 75px;
   font-family: 'Molle', cursive;
@@ -96,6 +99,8 @@ body  {
 .tile:hover {
   background-color: #F2F2F2;
   box-shadow: 0 0 21px rgba(33,33,33,.2);
+  color:#C59C66;
+  text-decoration: none;
 }
 
 .home {

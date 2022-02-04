@@ -1,0 +1,18 @@
+<div class="modal-overlay" {{on "click" @cancel}}></div>
+
+<dialog class="modal prompt" open>
+  <form {{on "submit" this.save}}>
+    <h2 class="prompt-text">
+      {{this.draft.prompt}}
+    </h2>
+    <Textarea
+      @value={{this.draft.response}}
+      class="prompt-textarea {{if this.error 'error'}}" />
+    {{#if this.error}}
+      <div class="form-error">
+        {{this.error}}
+      </div>
+    {{/if}}
+    <input type="submit" value="Save Entry" class="add-button">
+  </form>
+</dialog>

@@ -1,0 +1,14 @@
+{{page-title "Gratitude"}}
+
+{{#if this.showGratitudeModal}}
+  <Gratitude::Post @addEntry={{this.addEntry}} @cancel={{fn (mut this.showGratitudeModal) false}} />
+{{/if}}
+
+<button class="add-button"
+  {{on "click" (fn (mut this.showGratitudeModal) true)}} >
+  Add +
+</button>
+
+{{#each model as |entry|}}
+  <Gratitude::Entry @entry={{entry}} />
+{{/each}}
