@@ -6,8 +6,8 @@ export default class HomeComponent extends Component {
   @service router;
 
   @action
-  routeToTracker() {
-    this.router.transitionTo('tracker');
+  routeToTracker(url) {
+    this.router.transitionTo(url);
   }
 
 }

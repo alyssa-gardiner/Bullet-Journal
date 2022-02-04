@@ -90,8 +90,12 @@ body  {
   height: 300px
   text-align:center;
   font-size: 75px;
-font-family: 'Molle', cursive;
-color:#C59C66;
+  font-family: 'Molle', cursive;
+  color:#C59C66;
+}
+.tile:hover {
+  background-color: #F2F2F2;
+  box-shadow: 0 0 21px rgba(33,33,33,.2);
 }
 
 .home {
