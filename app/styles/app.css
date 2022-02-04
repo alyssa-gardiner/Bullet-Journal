@@ -2,6 +2,7 @@
 @import "ember-modal-dialog/ember-modal-appearance.css";
 @import "gratitude/index.css";
 @import "gratitude/entry.css";
+@import "gratitude/post.css";
 
 .layout {
   display: flex;
