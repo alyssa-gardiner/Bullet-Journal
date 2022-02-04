@@ -1,0 +1,42 @@
+.sticker-box {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  background: white;
+  overflow-y: scroll;
+  border: 2px solid #0000002b;
+}
+
+.sticker-target {
+  border: 2px dotted transparent;
+  width: calc(100% - 1rem);
+  height: calc(100% - 2rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.sticker-target:hover {
+  background: rgb(153, 51, 255, 0.1);
+  border: 2px dotted rgb(153, 51, 255);
+}
+
+.sticker {
+  font-size: 3rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  padding: 0 1rem;
+  border: 2px dotted transparent;
+}
+
+.sticker:hover {
+  border: 2px dotted rgb(255, 51, 153);
+  background:  rgb(255, 51, 153, 0.1)
+}
+
+.calendar-sticker {
+  display: inline-block;
+  text-align: center;
+}
