@@ -1,7 +1,30 @@
-
 <div class="key">
   {{#each this.keyItems as |keyItem|}}
     <KeyItem @keyItem={{keyItem}} @onColorChange={{this.onColorChange}}></KeyItem>
   {{/each}}
+  <button type="button" {{on "click" (fn (mut this.showAddModal) true)}}>Add Exercise</button>
 </div>
+
+{{#if this.showAddModal}}
+  <ModalDialog
+    @translucentOverlay=true
+    @onClose={{action (mut this.showAddModal) false}}>
+    <div class="edit-modal">
+      <h2 style="text-align: center">Add new Exercise</h2>
+      <Input
+        id="user-question"
+        @type="text"
+        @value={{this.newName}}
+      />
+      <div class="docs-flex col-sm">
+        {{color-picker
+          value=this.color
+          format="hex"
+          onSave=(action "handleOnChange")
+        }}
+      </div>
+      <button type="button" {{on 'click' addExercise}}>Save</button>
+    </div>
+  </ModalDialog>
+{{/if}}
 
