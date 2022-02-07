@@ -1,7 +1,6 @@
 <div class="calendar-day" style="background-color:{{@day.exercise.color}}"
   {{on "click" this.showModal}}>
-  {{@day.number}}
-  {{@day.exercise.name}}
+  {{@day.dayOfMonth}}
 </div>
 
 {{#if this.showModalValue}}

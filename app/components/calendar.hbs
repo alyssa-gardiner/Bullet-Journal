@@ -1,4 +1,5 @@
 <div class="calendar">
+  {{log @month}}
 {{#each @month.days as |day|}}
   <CalendarDay @day={{day}}></CalendarDay>
 {{/each}}
